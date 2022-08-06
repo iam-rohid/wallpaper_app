@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:wallpaper_app/home.dart';
+
+import 'src/home.dart';
 
 void main() {
   runApp(const MyApp());

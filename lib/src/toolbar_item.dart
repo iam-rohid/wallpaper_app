@@ -3,9 +3,10 @@ import 'package:flutter/material.dart';
 class ToolbarItem extends StatelessWidget {
   final Widget icon;
   final String label;
-
+  final String tag;
   const ToolbarItem({
     Key? key,
+    required this.tag,
     required this.icon,
     required this.label,
   }) : super(key: key);

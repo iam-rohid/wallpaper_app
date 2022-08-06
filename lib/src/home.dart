@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:wallpaper_app/emoji_wallpaper.dart';
-import 'package:wallpaper_app/gradient_wallpaper.dart';
-import 'package:wallpaper_app/text_on_image_wallpaper.dart';
+
+import 'text_on_image_wallpaper.dart';
+import 'create_wallpaper_with_emojis.dart';
+import 'create_wallpaper_with_gradients.dart';
 
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
@@ -22,7 +23,7 @@ class _HomeState extends State<Home> {
               onPressed: () => Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => const GradientWallpaper(),
+                  builder: (context) => const CreateWallpaperWithGradients(),
                 ),
               ),
               child: const Text("Gradient Wallpaper"),
@@ -31,7 +32,7 @@ class _HomeState extends State<Home> {
               onPressed: () => Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => const EmojiWallpapwer(),
+                  builder: (context) => const CreateWallpaperWithEmojis(),
                 ),
               ),
               child: const Text("Emoji Wallpaper"),

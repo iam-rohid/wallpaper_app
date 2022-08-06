@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:wallpaper_app/toolbar_item.dart';
+
+import 'toolbar_item.dart';
 
 class ScrollingToolBar extends StatelessWidget {
   final List<ToolbarItem> toolbarItems;
