@@ -122,7 +122,6 @@ class _CreateWallpaperWithTextOnImageState
             width,
             height,
           );
-          _imageRect = _imageRect.inflate(details.scale);
           setState(() {});
         },
         child: const LockScreenOverlay(),
