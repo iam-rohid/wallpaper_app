@@ -2,11 +2,11 @@ import 'dart:async';
 import 'dart:math';
 import 'package:flutter/material.dart';
 
-import 'lock_screen_overlay.dart';
-import 'painters/gradient_painter.dart';
-import 'services/file_service.dart';
-import 'toolbar_item.dart';
-import 'editor_toolbar.dart';
+import '../../widgets/lock_screen_overlay.dart';
+import '../../painters/gradient_painter.dart';
+import '../../services/file_service.dart';
+import '../../widgets/toolbar_item.dart';
+import '../../widgets/editor_toolbar.dart';
 
 const _closeTag = 'close';
 const _saveTag = 'save';
@@ -22,9 +22,8 @@ class CreateWallpaperWithGradients extends StatefulWidget {
 
 class _CreateWallpaperWithGradientsState
     extends State<CreateWallpaperWithGradients> {
-  final GlobalKey _canvasKey = GlobalKey();
-  List<Color> _colors = [];
   bool _isToolbarHidden = false;
+  List<Color> _colors = [];
 
   @override
   void initState() {
@@ -70,7 +69,6 @@ class _CreateWallpaperWithGradientsState
 
   CustomPaint _renderCanvas() {
     return CustomPaint(
-      key: _canvasKey,
       painter: GradientPainter(colors: _colors),
       child: _renderCanvasOverlay(),
     );

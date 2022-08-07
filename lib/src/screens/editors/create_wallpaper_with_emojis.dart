@@ -1,12 +1,12 @@
 import "dart:async";
 import 'package:flutter/material.dart';
 
-import 'lock_screen_overlay.dart';
-import 'models/emoji.dart';
-import 'painters/emoji_painter.dart';
-import 'services/file_service.dart';
-import 'toolbar_item.dart';
-import 'editor_toolbar.dart';
+import '../../widgets/lock_screen_overlay.dart';
+import '../../models/emoji.dart';
+import '../../painters/emoji_painter.dart';
+import '../../services/file_service.dart';
+import '../../widgets/toolbar_item.dart';
+import '../../widgets/editor_toolbar.dart';
 
 const _closeTag = 'close';
 const _saveTag = 'save';
@@ -29,7 +29,6 @@ class CreateWallpaperWithEmojis extends StatefulWidget {
 }
 
 class _CreateWallpaperWithEmojisState extends State<CreateWallpaperWithEmojis> {
-  final GlobalKey _canvasKey = GlobalKey();
   final String _emojiSet = '🥳😮‍💨🤑🥸🤮😘🤯🥺🤥😤😱😴';
   bool _isToolbarHidden = false;
   List<Emoji> _emojis = [];
@@ -55,7 +54,6 @@ class _CreateWallpaperWithEmojisState extends State<CreateWallpaperWithEmojis> {
 
   CustomPaint _renderCanvas() {
     return CustomPaint(
-      key: _canvasKey,
       painter: EmojiPainter(emojis: _emojis),
       isComplex: true,
       child: _renderCanvasOverlay(),

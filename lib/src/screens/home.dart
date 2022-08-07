@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-import 'text_on_image_wallpaper.dart';
-import 'create_wallpaper_with_emojis.dart';
-import 'create_wallpaper_with_gradients.dart';
+import 'editors/create_wallpaper_with_text_on_image.dart';
+import 'editors/create_wallpaper_with_emojis.dart';
+import 'editors/create_wallpaper_with_gradients.dart';
 
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
@@ -41,7 +41,7 @@ class _HomeState extends State<Home> {
               onPressed: () => Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => const TextOnImageWallpaper(),
+                  builder: (context) => const CreateWallpaperWithTextOnImage(),
                 ),
               ),
               child: const Text("Text on Image Wallpaper"),
