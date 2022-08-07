@@ -36,7 +36,7 @@ class _CreateWallpaperWithTextOnImageState
   void initState() {
     super.initState();
     _picker = ImagePicker();
-    Timer(const Duration(milliseconds: 100), () => _selectBackgroundImage());
+    Timer(const Duration(milliseconds: 1), () => _selectBackgroundImage());
   }
 
   @override
