@@ -34,11 +34,13 @@ class _CreateWallpaperWithGradientsState
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Stack(
-        children: [
-          _renderCanvas(),
-          _renderToolbar(),
-        ],
+      body: ClipRRect(
+        child: Stack(
+          children: [
+            _renderCanvas(),
+            _renderToolbar(),
+          ],
+        ),
       ),
     );
   }
